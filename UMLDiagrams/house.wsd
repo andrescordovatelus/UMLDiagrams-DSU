@@ -1,16 +1,29 @@
 @startuml house
 
 object house
-object walls
-object door
-object windows
-object roof
-object floor
-object rooms
-object chimney
+    object walls
+    object door
+    object windows
+    object roof
+    object floor
+    object chimney
+    object rooms
+        object bathroom
+        object bedroom
+        object kitchen
 
-object bathroom
-object bedroom
+    
+house *-- walls
+house *-- roof
+house *-- floor
+house *-- rooms
 
+rooms o-- bathroom
+rooms o-- bedroom
+rooms o-- kitchen
+
+house o-- chimney
+house o-- door
+house o-- windows
 
 @enduml

@@ -19,10 +19,10 @@ object gloves
 
 bicycle *-- metalStructure
 
-metalStructure *-- wheels
-metalStructure *-- pedals
-metalStructure *-- seat
-metalStructure *-- handlebar
+metalStructure o-- wheels
+metalStructure o-- pedals
+metalStructure o-- seat
+metalStructure o-- handlebar
 handlebar *-- speedChanges
 handlebar *-- breaks
 
