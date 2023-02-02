@@ -1,0 +1,38 @@
+@startuml bicycleandcyclist
+
+
+object bicycle
+object wheels
+object pedals
+object handlebar
+object breaks
+object speedChanges
+object seat
+object metalStructure
+
+
+object cyclists
+object person
+object cyclistClothes
+object helmet
+object gloves
+
+bicycle *-- metalStructure
+
+metalStructure *-- wheels
+metalStructure *-- pedals
+metalStructure *-- seat
+metalStructure *-- handlebar
+handlebar *-- speedChanges
+handlebar *-- breaks
+
+metalStructure o-- breaks
+metalStructure o-- speedChanges
+
+cyclists --> bicycle
+cyclists <|-- person
+cyclists o-- cyclistClothes
+cyclists o-- helmet
+cyclists o-- gloves
+
+@enduml

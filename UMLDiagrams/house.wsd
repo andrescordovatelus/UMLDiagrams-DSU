@@ -1,0 +1,5 @@
+@startuml house
+
+object house
+
+@enduml
