@@ -1,5 +1,25 @@
 @startuml house
 
 object house
+object walls
+object door
+object windows
+object roof
+object floor
+object rooms
+
+object bathroom
+object bedroom
+
+house *-- walls
+house *-- roof
+house *-- floor
+house *-- rooms
+
+house o-- door
+house o-- windows
+
+bathroom --> house
+bedroom --> house
 
 @enduml
