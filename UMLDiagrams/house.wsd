@@ -18,9 +18,9 @@ house *-- roof
 house *-- floor
 house *-- rooms
 
-rooms o-- bathroom
-rooms o-- bedroom
-rooms o-- kitchen
+rooms <|-- bathroom
+rooms <|-- bedroom
+rooms <|-- kitchen
 
 house o-- chimney
 house o-- door
