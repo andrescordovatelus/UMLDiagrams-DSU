@@ -1,0 +1,34 @@
+@startuml SRPGame
+
+object user
+    object person
+        object hands
+object Game
+    object actions
+    object counter
+    object result
+
+user <|-- person
+person *-- hands
+
+Game *-- user
+Game *-- counter
+Game *-- actions
+
+actions *-- hands
+counter *-- actions
+
+counter : times
+user : number
+
+counter o-- result
+
+result : win
+result : loose
+result : draw
+
+actions : rockShape
+actions : paperShape
+actions : scissorShape
+
+@enduml
