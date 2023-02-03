@@ -1,0 +1,40 @@
+@startuml trainGame
+
+object usuario
+    object person
+object train
+    object bagons
+    object wheels
+object remoteControl
+    object batteries
+    object actions
+        object goAhead
+        object clackson
+        object stopRun
+object runway
+    object pieces
+
+
+usuario *-- person
+
+train o-- bagons
+train o-- wheels
+train *-- batteries
+
+remoteControl *-- actions
+remoteControl *-- batteries
+
+actions <|-- goAhead
+actions <|-- clackson
+actions <|-- stopRun
+
+runway *-- pieces
+
+pieces : nCantidad
+
+train --> runway
+train *-> remoteControl
+
+usuario --> remoteControl
+
+@enduml
